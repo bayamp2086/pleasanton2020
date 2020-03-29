@@ -22,4 +22,33 @@ public class StringUtils {
         return false;
 
     }
+
+    /**
+     *
+     * @param str1
+     * @param str2
+     * @return
+     * Convert String into String array using split
+     * Iterate stringarray[0] through second array
+     * Loop the iteration and check if the contents are same
+     */
+    public static boolean CheckIfTwoStringsHaveEqualContent(String str1, String str2){
+        String[] array1 = str1.split(" ");
+        String[] array2 = str2.split(" ");
+        String temp = " ";
+        for(int i=0; i<array1.length; i++){
+            boolean contains = false;
+            for(int j=0; j<array2.length;j++){
+                if(array1[i].equals(array2[j])) {
+                    contains = true;
+                    //break;
+                }
+            }
+            if (! contains) {
+                return false;
+            }
+
+        }
+        return true;
+    }
 }
