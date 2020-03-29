@@ -24,7 +24,6 @@ public class StringUtils {
     }
 
     /**
-     *
      * @param str1
      * @param str2
      * @return
@@ -41,7 +40,6 @@ public class StringUtils {
             for(int j=0; j<array2.length;j++){
                 if(array1[i].equals(array2[j])) {
                     contains = true;
-                    //break;
                 }
             }
             if (! contains) {
