@@ -22,4 +22,19 @@ public class StringUtils {
         return false;
 
     }
+
+    //Reverse String by Words.
+    /**
+     * @param inputString
+     * @return reversed string by words
+     */
+    public String reverseByWords(String inputString) {
+        // String Array to hold values
+        String[] words = inputString.split(" ");
+        String str = " ";
+        for (int i = words.length - 1; i >= 0; i--) {
+            str = str + words[i] + " ";
+        }
+        return str;
+    }
 }
