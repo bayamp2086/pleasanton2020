@@ -22,4 +22,22 @@ public class StringUtils {
         return false;
 
     }
+    public static String sortCharcsInString(String str) {
+        //char[] myCharArray= str.toCharArray();
+        String[] myStrArray = str.split(" ");
+        for (int i = 0; i < myStrArray.length - 1; i++) {
+            for (int j = i + 1; j > 0; j--) {
+                if (myStrArray[j].compareToIgnoreCase(myStrArray[j - 1]) > 0) {
+                    String temp = myStrArray[j - 1];
+                    myStrArray[j - 1] = myStrArray[j];
+                    myStrArray[j] = temp;
+                }
+            }
+        }
+        String resStr = "";
+        for (int i = myStrArray.length - 1; i >= 0; i--) {
+            resStr = resStr + myStrArray[i] + " ";
+        }
+        return resStr.trim();
+    }
 }
