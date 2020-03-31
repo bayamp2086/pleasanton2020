@@ -65,4 +65,29 @@ public class StringUtils {
         return str;
     }
 
+    //Palindrome Check
+    /**
+     * @param inputString
+     * @return boolean value whether  string is palindrome/not
+     * @throws Exception
+     */
+    public static boolean isPalindromeCheck(String inputString) throws Exception {
+        if(inputString == null || inputString == "" || inputString == " ") {
+            throw new Exception("Hey warning. Looks like inputString is null") ;
+        }
+        boolean palindromeChkFlag = false;
+        int i = 0;
+        int j = inputString.length() - 1;
+        while (i < j) {
+            if (inputString.charAt(i) != inputString.charAt(j))
+                palindromeChkFlag = false;
+            // Increment first pointer and
+            // decrement the other
+            i++;
+            j--;
+            break;
+        }
+        palindromeChkFlag = true;
+        return palindromeChkFlag;
+    }
 }
