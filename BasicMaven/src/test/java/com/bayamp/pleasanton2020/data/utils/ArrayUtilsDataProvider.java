@@ -4,10 +4,8 @@ import org.testng.annotations.DataProvider;
 
 public class ArrayUtilsDataProvider{
 
-@DataProvider(name="getCSVData")
-public static Object[][] getCSVData(){
-        return CSVDataReader.getMyCSVData("arrayutilsreversearray-testdata.csv");
+        @DataProvider(name="getCSVData")
+        public static Object[][] getCSVData(){
+                return CSVDataReader.getMyCSVData("arrayutilsreversearray-testdata.csv");
         }
-
-
-        }
+}

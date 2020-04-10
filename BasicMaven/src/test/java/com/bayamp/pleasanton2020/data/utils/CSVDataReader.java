@@ -1,12 +1,9 @@
 package com.bayamp.pleasanton2020.data.utils;
 
 import com.opencsv.CSVReader;
-
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class CSVDataReader {
@@ -21,7 +18,6 @@ public class CSVDataReader {
             CSVReader reader = new CSVReader(new FileReader(filename), ';', '\'', 1);
             List<String[]> myEntries = reader.readAll();
             myData = new Object[myEntries.size()][2];
-            System.out.println(myEntries.get(0)[1]);
             for (int i = 0; i < myEntries.size(); i++) {
                 myData[i][0] = myEntries.get(i)[0].split(" ");
                 myData[i][1] = myEntries.get(i)[1].split(" ");
