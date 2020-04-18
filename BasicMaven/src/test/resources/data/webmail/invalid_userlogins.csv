@@ -1,0 +1,7 @@
+userid,passwd,expectedResults
+user1@bayamp.com,user2,expectedResults1
+user2@bayamp.com,user23,expectedResults2
+user3@bayamp.com,user33,expectedResults3
+ ,user1,expectedResults4
+user2@bayamp.com,,expectedResults5
+user33@bayamp.com,user31,expectedResults

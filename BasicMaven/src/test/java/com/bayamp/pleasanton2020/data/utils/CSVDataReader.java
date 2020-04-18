@@ -16,6 +16,8 @@ public class CSVDataReader {
         try {
             filename = path + filename;
             CSVReader reader = new CSVReader(new FileReader(filename), ';', '\'', 1);
+           String [] columnsline= reader.readNext();
+            System.out.println(columnsline.length);
             List<String[]> myEntries = reader.readAll();
             myData = new Object[myEntries.size()][2];
             for (int i = 0; i < myEntries.size(); i++) {

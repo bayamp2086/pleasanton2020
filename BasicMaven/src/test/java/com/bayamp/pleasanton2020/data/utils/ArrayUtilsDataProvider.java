@@ -6,6 +6,6 @@ public class ArrayUtilsDataProvider{
 
         @DataProvider(name="getCSVData")
         public static Object[][] getCSVData(){
-                return CSVDataReader.getMyCSVData("arrayutilsreversearray-testdata.csv");
+         return CSVDataReader.getMyCSVData("arrayutilsreversearray-testdata.csv");
         }
 }
