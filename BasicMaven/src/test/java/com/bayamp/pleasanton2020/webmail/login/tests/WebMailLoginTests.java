@@ -13,7 +13,7 @@ import java.util.concurrent.TimeUnit;
 
 public class WebMailLoginTests {
     private WebDriver driver;
-    private String app_url = new String("http://webmail.bayamp.com/");
+    private final String app_url = new String("http://webmail.bayamp.com/");
     private String user_by_id = new String("user");
     private String user_by_css = new String("#user");
     private String passwd_by_id = new String("pass");
