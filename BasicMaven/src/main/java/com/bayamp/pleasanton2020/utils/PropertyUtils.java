@@ -13,7 +13,6 @@ public class PropertyUtils {
     public static String getProperty(String propertyName) {
         if (prop == null) {
             try {
-                System.out.println(CONFIG_PROPERTY_FILE_PATH);
                 FileInputStream inputStream = new FileInputStream(new File(CONFIG_PROPERTY_FILE_PATH));
                 prop = new Properties();
                 prop.load(inputStream);
